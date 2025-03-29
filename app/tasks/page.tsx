@@ -85,7 +85,7 @@ export default function TasksPage() {
     }
   };
 
-  const handleStatusUpdate = async (taskId: string, status: string) => {
+  const handleStatusUpdate = async (taskId: string, status: 'pending' | 'completed'): Promise<void> => {
     try {
       await updateTaskStatus(taskId, status);
       setTasks(tasks.map(task => 

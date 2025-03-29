@@ -8,7 +8,7 @@ import { format } from 'date-fns';
 
 interface TaskListProps {
   tasks: Task[];
-  onStatusUpdate: (taskId: string, status: string) => void;
+  onStatusUpdate: (taskId: string, status: 'pending' | 'completed') => void;
 }
 
 export default function TaskList({ tasks, onStatusUpdate }: TaskListProps) {
